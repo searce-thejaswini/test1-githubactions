@@ -32,10 +32,10 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
-        working-directory: infra
+        working-directory: ../..
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
-        working-directory: infra
+        working-directory: ../..
         run: terraform apply -auto-approve tfplan
 
